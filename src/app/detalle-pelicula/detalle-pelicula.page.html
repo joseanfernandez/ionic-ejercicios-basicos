@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color="dark">
+  
+      <ion-buttons slot="start">
+        <ion-button (click)="close()">
+          <ion-icon slot="icon-only" name="close-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>{{film.title}}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="presentAlertConfirm()">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding color="medium">
+    <ion-row>
+      <ion-col size="6">
+        <img src="../../assets/imagenes/{{film.cover}}">
+      </ion-col>
+      <ion-col>
+        <ion-item lines="none">Lanzamiento: {{film.release}}</ion-item>
+        <ion-item lines="none">Puntuación: {{film.score}}</ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      {{film.synopsis}}
+    </ion-row>
+  </ion-content>

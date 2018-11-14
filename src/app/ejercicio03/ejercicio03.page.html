@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Contador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="displayNumber">
+    {{ n }}
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-grid>
+    <ion-row size="12">
+      <ion-col size="3">
+          <ion-button (click)="add()" expand="full" shape="round" fill="outline" color="dark">
+              <ion-icon name="add"></ion-icon>
+          </ion-button>
+      </ion-col>
+      <ion-col size="3">
+          <ion-button (click)="subtract()" expand="full" shape="round" fill="outline" color="dark">
+              <ion-icon name="remove"></ion-icon>
+          </ion-button>
+      </ion-col>
+      <ion-col size="6">
+          <ion-button (click)="reset()" expand="full" shape="round" color="danger">Reset</ion-button>
+      </ion-col >
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Número aletorio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Mínimo</ion-label>
+    <ion-input [(ngModel)]="min"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Máximo</ion-label>
+    <ion-input [(ngModel)]="max"></ion-input>
+  </ion-item>
+  <ion-button *ngIf="!disabled" (click)="generate()" expand="full" shape="round" color="dark" fill="outline">GENERAR</ion-button>
+  <ion-button *ngIf="disabled" disabled (click)="generate()" expand="full" shape="round" color="dark" fill="outline">GENERAR</ion-button>
+  <h2 (click)="showMinMax()">{{n}}</h2>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Conversor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label position="floating">Pesetas</ion-label>
+    <ion-input clearInput [(ngModel)]="pesetas" (keyup)="convertPesetasEuros()"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Euros</ion-label>
+    <ion-input clearInput [(ngModel)]="euros" (keyup)="convertEurosPesetas()"></ion-input>
+  </ion-item>
+</ion-content>

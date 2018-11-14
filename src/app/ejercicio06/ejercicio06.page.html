@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Saca al pulpogato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">
+        <ion-icon (click)="move()" *ngIf="pos === 1" name="logo-octocat"></ion-icon>
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+      </ion-col>
+      <ion-col size="3">
+          <ion-icon (click)="move()" *ngIf="pos === 2" name="logo-octocat"></ion-icon>
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+      <ion-col size="3">
+          <ion-icon (click)="move()" *ngIf="pos === 3" name="logo-octocat"></ion-icon>
+      </ion-col>
+      <ion-col size="3">
+          <ion-icon id="octocat" *ngIf="pos === 4" name="logo-octocat"></ion-icon>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="3">
+      </ion-col>
+      <ion-col size="3">
+
+      </ion-col>
+      <ion-col size="3">
+      </ion-col>
+      <ion-col size="3">
+        <ion-icon name="exit"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <h2 *ngIf="pos === 4">¡Has conseguido sacar al pulpogato!</h2>
+</ion-content>
